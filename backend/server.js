@@ -13,9 +13,8 @@ app.get('/api/chat', (req,res) => {
 });
 
 app.get('/api/chat/:id', (req,res) => {
-    console.log(req.params.id);
-    const singleChat = chats.find(c => c.id === req.params.id);
-    res.send(singleChat);
+    console.log(req);
+    
 });
 
 //new web server started
