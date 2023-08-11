@@ -5,9 +5,9 @@ const dotenv = require('dotenv');
 const app = express();
 dotenv.config();
 
-//API created
+//API created (expressjs api)
 app.get('/', (req, res) => {
-    res.send('API is Running...');
+    res.send('API is Running successfully');
 });
 
 app.get('/api/chat', (req,res) => {
@@ -21,7 +21,8 @@ app.get('/api/chat/:id', (req,res) => {
     
 });
 
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 5000;
 
 //new web server started
-app.listen(${PORT}, console.log('Server started on PORT ${PORT}'));   
+app.listen( PORT, console.log(`Server started on PORT ${PORT}`));   
+// app.listen(port, () => console.log('Server started on PORT ' + port));
